@@ -25,7 +25,7 @@ namespace Ragnar.HttpBearerChallenge
 
         #region Constructors
 
-        // <summary>
+        /// <summary>
         /// Initializes a new instance of the <see cref="HttpBearerChallengeEvents"/> class.
         /// </summary>
         public HttpBearerChallengeEvents()
@@ -35,7 +35,7 @@ namespace Ragnar.HttpBearerChallenge
         /// <summary>
         /// Initializes a new instance of the <see cref="HttpBearerChallengeEvents"/> class.
         /// </summary>
-        /// <param name="scope">The scope that should be included in the challenge.</param>
+        /// <param name="defaultScope">The scope that should be included in the challenge by default.</param>
         public HttpBearerChallengeEvents(string defaultScope)
         {
             if (string.IsNullOrWhiteSpace(defaultScope))
