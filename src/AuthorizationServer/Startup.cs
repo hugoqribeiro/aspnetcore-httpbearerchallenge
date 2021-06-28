@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Duende.IdentityServer.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -8,10 +8,16 @@ using Microsoft.Extensions.Hosting;
 
 namespace Ragnar.AuthorizationServer
 {
-    public class Startup
+    /// <summary>
+    /// Defines the application startup.
+    /// </summary>
+    public partial class Startup
     {
         #region Public Properties
 
+        /// <summary>
+        /// Gets the configuration.
+        /// </summary>
         public IConfiguration Configuration { get; }
 
         #endregion
@@ -60,15 +66,23 @@ namespace Ragnar.AuthorizationServer
 
         #region Constructors
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Startup"/> class.
+        /// </summary>
+        /// <param name="configuration">The configuration.</param>
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            this.Configuration = configuration;
         }
 
         #endregion
 
         #region Public Methods
 
+        /// <summary>
+        /// Configures the services.
+        /// </summary>
+        /// <param name="services">The service collection.</param>
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
@@ -80,6 +94,11 @@ namespace Ragnar.AuthorizationServer
                 .AddInMemoryClients(Clients);
         }
 
+        /// <summary>
+        /// Configures the specified application.
+        /// </summary>
+        /// <param name="app">The application.</param>
+        /// <param name="env">The environment.</param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

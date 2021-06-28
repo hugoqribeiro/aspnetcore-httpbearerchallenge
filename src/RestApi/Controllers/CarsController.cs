@@ -4,10 +4,20 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Ragnar.RestApi.Controllers
 {
+    /// <summary>
+    /// Provides actions on cars.
+    /// </summary>
+    /// <seealso cref="Controller" />
     public partial class CarsController : Controller
     {
         #region Public Methods
 
+        /// <summary>
+        /// Retrieves all the cars.
+        /// </summary>
+        /// <returns>
+        /// The action result.
+        /// </returns>
         [HttpGet("/cars", Name = "CarsController.GetCars")]
         [Authorize("read-cars")]
         public IActionResult GetCars()
