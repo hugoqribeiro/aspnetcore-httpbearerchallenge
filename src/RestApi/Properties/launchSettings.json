@@ -1,0 +1,13 @@
+﻿{
+    "profiles": {
+        "On DotNetCli": {
+            "commandName": "Project",
+            "dotnetRunMessages": "true",
+            "launchBrowser": false,
+            "applicationUrl": "https://localhost:20001;http://localhost:20000",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        }
+    }
+}

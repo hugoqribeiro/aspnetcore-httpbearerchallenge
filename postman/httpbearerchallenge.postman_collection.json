@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "965cc210-34a8-49fb-a1ec-de7f29a6c968",
+		"name": "aspnetcore-httpbearerchallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Cars",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjE3OEM0NDQzQkZEOUVFRjE3RjFFNUFDNTQ5OEFBMkU3IiwidHlwIjoiYXQrand0In0.eyJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAxIiwibmJmIjoxNjI0ODczMTM1LCJpYXQiOjE2MjQ4NzMxMzUsImV4cCI6MTYyNDg3NjczNSwiYXVkIjoicmVzdC1hcGkiLCJzY29wZSI6WyJyZWFkLWNhcnMiXSwiY2xpZW50X2lkIjoib25lLWNsaWVudCIsImp0aSI6IjgzNjkxMzFCNkI1Rjg2REIwMDA2MUI1MTAzQzg3MjlFIn0.mYjVDYkqw20dctSIc3yhNq872cYZeAC_O4L7b65Y6DujLaNsnkAt6vZ4ohE1EDbfEhTwf-Ka2MZMJnlKMEqAX3Kis1Du9nRcMpaJNcE_tBZ3VEJrgI4lrNP4hk5l8BuNmK4JePG8Vmtb6epIR9JjBonALMTGdzg6o72l5zUVQEDDnoXi4m0nS-0N4nJHREC6JN5N3Mdobs0InmU6y9sc-GLVUK3jCyRSM1oi9h-T6agxI4zX7eCZ-ZkepDONhE7-xDEZCEajHDQsHKwPTRlQIL63VTn3a42I1J3CkryAhmrPCaH6QbXaZNFmWqWtA0HPQdKwBZ_C-AaPJIvvgD61vA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://localhost:20001/cars",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "20001",
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Trucks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjE3OEM0NDQzQkZEOUVFRjE3RjFFNUFDNTQ5OEFBMkU3IiwidHlwIjoiYXQrand0In0.eyJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAxIiwibmJmIjoxNjI0ODczMTM1LCJpYXQiOjE2MjQ4NzMxMzUsImV4cCI6MTYyNDg3NjczNSwiYXVkIjoicmVzdC1hcGkiLCJzY29wZSI6WyJyZWFkLWNhcnMiXSwiY2xpZW50X2lkIjoib25lLWNsaWVudCIsImp0aSI6IjgzNjkxMzFCNkI1Rjg2REIwMDA2MUI1MTAzQzg3MjlFIn0.mYjVDYkqw20dctSIc3yhNq872cYZeAC_O4L7b65Y6DujLaNsnkAt6vZ4ohE1EDbfEhTwf-Ka2MZMJnlKMEqAX3Kis1Du9nRcMpaJNcE_tBZ3VEJrgI4lrNP4hk5l8BuNmK4JePG8Vmtb6epIR9JjBonALMTGdzg6o72l5zUVQEDDnoXi4m0nS-0N4nJHREC6JN5N3Mdobs0InmU6y9sc-GLVUK3jCyRSM1oi9h-T6agxI4zX7eCZ-ZkepDONhE7-xDEZCEajHDQsHKwPTRlQIL63VTn3a42I1J3CkryAhmrPCaH6QbXaZNFmWqWtA0HPQdKwBZ_C-AaPJIvvgD61vA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://localhost:20001/trucks",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "20001",
+					"path": [
+						"trucks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "one-client",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "read-cars",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:5001/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
